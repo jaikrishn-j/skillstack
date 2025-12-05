@@ -65,7 +65,7 @@ Ensure to change the user and password for postgresql
 Add Gemini API key for AI insights
 
 
-### 2. Clone the Repository
+### 3. Clone the Repository
 
 ```bash
 git clone https://github.com/jaikrishn-j/skillstack.git
