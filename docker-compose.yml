@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15
+    container_name: skillstack_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_DB: ${POSTGRES_DB:-skillstack}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - skillstack_network
+
+  # Backend (FastAPI)
+  backend:
+    build:
+      context: ./backend
+    container_name: skillstack_backend
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-password}@db:5432/${POSTGRES_DB:-skillstack}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    ports:
+      - "8000:8000"
+    networks:
+      - skillstack_network
+
+  # Frontend (Vite + Nginx)
+  frontend:
+    build:
+      context: ./vite-project
+    container_name: skillstack_frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    networks:
+      - skillstack_network
+
+volumes:
+  postgres_data:
+
+networks:
+  skillstack_network:
+    driver: bridge

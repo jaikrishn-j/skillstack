@@ -1,0 +1,25 @@
+# General
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Python / Backend
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/venv/
+backend/env/
+backend/.env
+backend/.env.*
+backend/*.db
+backend/*.sqlite3
+
+# Node / Frontend
+vite-project/node_modules/
+vite-project/dist/
+vite-project/.env
+vite-project/.env.*
+vite-project/npm-debug.log*
+vite-project/yarn-debug.log*
+vite-project/pnpm-debug.log*
