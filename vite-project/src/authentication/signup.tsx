@@ -20,9 +20,9 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-type Props = {}
 
-const Signup = (props: Props) => {
+
+const Signup = () => {
     const [isCheckingAuth, setIsCheckingAuth] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
     const [name, setName] = useState("")

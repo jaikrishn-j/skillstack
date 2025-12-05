@@ -20,9 +20,9 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-type Props = {}
 
-const Signin = (props: Props) => {
+
+const Signin = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [isSigningIn, setIsSigningIn] = useState(false)
     const [email, setEmail] = useState("")

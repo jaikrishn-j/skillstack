@@ -1,5 +1,5 @@
 import { API_ENDPOINTS } from "@/config/api"
-import type { Resource, ResourceCreate, ResourceUpdate, ResourceType, ResourcePlatform } from "@/types/resource"
+import type { Resource, ResourceCreate, ResourceType, ResourcePlatform } from "@/types/resource"
 import apiClient from "./apiClient"
 
 // Resources
