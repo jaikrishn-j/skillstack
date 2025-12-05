@@ -61,7 +61,7 @@ Download from: https://www.docker.com/get-started/
 
 ---
 ### 2. Edit the docker-compose.yml
-Ensure to change the user and password for postgresql.
+Ensure to change the user and password for postgresql.  
 Add Gemini API key for AI insights.
 
 
