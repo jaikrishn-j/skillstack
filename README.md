@@ -60,6 +60,10 @@ Ensure Docker is installed and running on your system.
 Download from: https://www.docker.com/get-started/
 
 ---
+### 2. Edit the docker-compose.yml
+Ensure to change the user and password for postgresql 
+Add Gemini API key for AI insights
+
 
 ### 2. Clone the Repository
 
